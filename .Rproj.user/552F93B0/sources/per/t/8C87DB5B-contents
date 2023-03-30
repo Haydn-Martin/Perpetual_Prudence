@@ -1,0 +1,143 @@
+df <- data.frame()
+df
+install.packages("quantmod")
+library(quantmod)
+df <- data.frame(getSymbols("AAPL",auto.assign = F))
+DF
+df
+head(df)
+tail(df)
+aapl <- tail(df)
+aapl
+
+aapl[1:3, 1:2]
+aapl[1,]
+aapl[1,1]
+aapl[,1]
+aapl[,c(1,4)]
+
+
+aapl["2020-03-20",]
+colnames(aapl)
+
+aapl[,1]
+class[aapl]
+class[aapl[,1]]
+class(aapl[,1])
+
+colnames(aapl) <- c("Open", "High", "Low", "Close", "Volume", "Adjust")
+aapl[,"Open"]
+
+
+aapl["2020-03-20","High"]
+
+df
+aapl <- df
+aapl
+head(aapl)
+colnames(aapl) <- c("Open", "High", "Low", "Close", "Volume", "Adjust")
+head(aapl)
+
+write.csv(aapl, "AAPL-Data.csv")
+
+read.csv("AAPL-Data.csv", row.names = 1)
+head(read.csv("AAPL-Data.csv", row.names = 1))
+
+aapl <- read.csv("AAPL-Data.csv", row.names = 1)
+
+data <- aapl
+
+plot(data)
+
+Cl(data)
+plot(data)
+plot(Cl(data),type = 'l')
+
+plot(Ad(data), type = 'l')
+
+aapl
+head(aapl)
+colnames(aapl) <- c("Open", "High", "Low", "Close", "Volume", "Adjusted")
+head(aapl)
+data <- aapl
+
+plot(Ad(data), type = 'l')
+
+length(Ad(data))
+
+100*((Ad(data)[3329] - Ad(data)[1])/ Ad(data)[1])
+
+100*((Ad(data)[2] - Ad(data)[1])/ Ad(data)[1])
+100*((Ad(data)[3] - Ad(data)[2])/ Ad(data)[2])
+
+dailyReturn(Ad(as.xts(data)), type = 'arithmetic')
+
+plot(dailyReturn(Ad(as.xts(data)), type = 'arithmetic'))
+
+plot(cumprod(1+dailyReturn(Ad(as.xts(data)), type = 'arithmetic')))
+
+plot(diff(log(Ad(data))), type = 'l')
+
+head(data[,c("Close", "Adjusted")])
+
+apply(data[,c("Close", "Adjusted")], 2, length)
+
+apply(data[,c("Close", "Adjusted")], 2, log)
+apply(apply(data[,c("Close", "Adjusted")], 2, log), 2, diff)
+
+CompareAdtoCl <- data.frame(apply(apply(data[,c("Close", "Adjusted")], 2, log), 2, diff))
+CompareAdtoCl
+
+plot(CompareAdtoCl[,1], type = 'l')
+
+CompareAdtoClCumSum <- data.frame(apply(CompareAdtoCl, 2, cumsum))
+head(CompareAdtoClCumSum)
+
+plot(CompareAdtoClCumSum[,1], type='l')
+lines(CompareAdtoClCumSum[,2], type='l', col="red")
+
+plot(cumprod(1+dailyReturn(Ad(as.xts(data)), type="arithmetic"))) 
+lines(cumsum(dailyReturn(Ad(as.xts(data)), type="log")), col="red")
+
+install.packages("PerformanceAnalytics")
+library(PerformanceAnalytics)
+
+as.xts(CompareAdtoCl)
+class(CompareAdtoCl)
+
+data <- as.xts(CompareAdtoCl)
+data <- exp(data) - 1
+data
+
+charts.PerformanceSummary(data, main="Compare Close to Adjusted Cumulative Discrete Return")
+
+TSLA <- dailyReturn(Ad(getSymbols("TSLA", auto.assign=F)))
+TSLA
+
+charts.PerformanceSummary(TSLA)
+
+colnames(TSLA) <- TSLA
+head(TSLA)
+
+MCFT <- dailyReturn(Ad(getSymbols("MCFT", auto.assign=F)))
+MCFT
+
+colnames(MCFT) <- "MCFT"
+colnames(TSLA) <- "TSLA"
+
+head(TSLA)
+
+merge(TSLA,MCFT)
+dim(merge(TSLA,MCFT))
+
+merge(TSLA,MCFT, all=F)
+
+dim(merge(TSLA,MCFT, all=F))
+
+mcftvstsla <- merge(TSLA,MCFT, all=F)
+
+head(mcftvstsla)
+
+charts.PerformanceSummary(mcftvstsla)
+
+table.AnnualizedReturns(mcftvstsla, scale=252, Rf=0.005/252)
