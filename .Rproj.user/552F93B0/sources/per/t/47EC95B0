@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1677053146040.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2003656410",
+    "id" : "47EC95B0",
+    "lastKnownWriteTime" : 1609936136,
+    "last_content_update" : 1609936136,
+    "path" : "~/Documents/Personal/Code/R/Clean Up.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "12,21",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

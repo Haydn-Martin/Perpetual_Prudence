@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1677053323194.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "155081472",
+    "id" : "CD468AEB",
+    "lastKnownWriteTime" : 1631953719,
+    "last_content_update" : 1631953719,
+    "path" : "~/Repos/Perpetual_Prudence/Articles/The_Problems_With_Statistics/FTSE.R",
+    "project_path" : "Articles/The_Problems_With_Statistics/FTSE.R",
+    "properties" : {
+        "cursorPosition" : "151,38",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

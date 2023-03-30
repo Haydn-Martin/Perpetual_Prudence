@@ -1,0 +1,81 @@
+p {
+font-size:16px;
+}
+
+.main-navigation a {
+	font-size: 16px;
+}
+
+#secondary .widget-title {
+	font-size: 22px;
+}
+
+#secondary .widget, .error-404 .widget {
+	font-size: 16px;
+}
+
+#jp-relatedposts h3.jp-relatedposts-headline {
+	font-size: 1.6em;
+}
+
+#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
+	font-size: 1em;
+	line-height: 1em;
+}
+
+.post .entry-content {
+	margin-bottom: 10px;
+}
+
+.entry-content ul {
+	list-style: disc;
+}
+
+.entry-content ul,
+.entry-content ol {
+	padding: 0 35px 0 35px;
+	margin-bottom: 35px;
+}
+
+.entry-content li > ul,
+.entry-content li > ol {
+	margin-bottom: 0;
+}
+
+.entry-content li {
+	line-height: 1.6;
+	padding-left: 0px;
+	margin-bottom: 10px;
+}
+
+#content .post .article-content .below-entry-meta .posted-on {
+	display: none;
+}
+
+#content .post .article-content .below-entry-meta .byline{
+	display: none;
+}
+
+.page .entry-title {
+display: none;
+}
+
+.footer-socket-wrapper {
+	display: none;
+}
+
+.page-header .page-title {
+	display: none;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #000000;
+	font: 16px 'Open Sans', serif;
+	line-height: 1.6;
+	word-wrap: break-word;
+}
+
